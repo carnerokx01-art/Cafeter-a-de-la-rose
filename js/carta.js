@@ -46,7 +46,7 @@ const cartaData = {
                     img: "./Fotos DelaRose/platillos/molletes con carne.jpg"
                 },
                 { name: "Molletes Dulces", price: 40, options: ["Cajeta", "Mermelada", "Azúcar"] },
-                { name: "Hotcakes", price: 70, img: "./Fotos DelaRose/platillos/hotcakes.jpg" },
+                { name: "Hotcakes", price: 70, img: "./Fotos DelaRose/platillos/Hotcakes.jpg" },
                 { name: "Pan Francés", price: 60 , img: "./Fotos DelaRose/platillos/pan frances.jpg" }
             ],
             note: "Proteína extra $30"
@@ -176,7 +176,7 @@ const cartaData = {
                     desc: "1 refil.",
                     img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&auto=format&fit=crop&q=80"
                 },
-                { name: "Limonada Natural / Mineral", price: 35, desc: "Rosa $45 · Fresa $50.", img: "./Fotos DelaRose/bebidas/limonadas.jpeg" },
+                { name: "Limonada Natural / Mineral", price: 35, desc: "Rosa $45 · Fresa $50.", img: "./Fotos DelaRose/bebidas/Limonadas.jpeg" },
                 { name: "Naranjada Natural / Mineral", price: 45, img: "./Fotos DelaRose/bebidas/naranjada.jpeg" },
                 { name: "Chocolate De La Rose", price: 50 , img: "./Fotos DelaRose/bebidas/chocolate de la rose.jpeg"},
                 { name: "Chocomilk", price: 33 , img: "./Fotos DelaRose/bebidas/chocomilk.jpeg"},
