@@ -156,7 +156,7 @@ const cartaData = {
                 { name: "Pizza Baguette", price: 80, desc: "Piña, jamón, salami, pepperoni, salchicha.", img: "./Fotos DelaRose/platillos/Pizza baguette.jpg" },
                 { name: "Nachos con Carne", price: 80, desc: "Arrachera o molida preparada.", img: "./Fotos DelaRose/platillos/nachos carne.jpg" },
                 { name: "Nachos Sencillos", price: 60, img: "./Fotos DelaRose/platillos/nachos sencillos.jpeg" },
-                { name: "Papas Gajo", price: 55, img: "./Fotos DelaRose/platillos/Papas gajo.jpeg" },
+                { name: "Papas Gajo", price: 55, img: "./Fotos DelaRose/platillos/papas gajo.jpeg" },
                 { name: "Papas a la Francesa", price: 45, img: "./Fotos DelaRose/platillos/papas francesas.jpeg" }
             ]
         },
