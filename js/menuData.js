@@ -638,7 +638,7 @@ const menuItems = [
     {
         id: 54,
         title: "Frappé Especial",
-        category: "frias",
+        category: "frappes-smoothies",
         price: 55,
         tag: "Frappé",
         badgeColor: "bg-roseblue-400",
@@ -664,7 +664,7 @@ const menuItems = [
     {
         id: 55,
         title: "Malteada Cremosa",
-        category: "frias",
+        category: "frappes-smoothies",
         price: 60,
         tag: "Malteada",
         badgeColor: "bg-roseblue-400",
@@ -688,7 +688,7 @@ const menuItems = [
     {
         id: 56,
         title: "Smoothie de Fruta",
-        category: "smoothies",
+        category: "frappes-smoothies",
         price: 70,
         tag: "Smoothie",
         badgeColor: "bg-roseblue-400",

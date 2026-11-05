@@ -81,7 +81,7 @@ function setupReservationMinDate() {
 }
 
 // ==========================================
-// RENDERIZADO DEL MENÚ
+// RENDERIZADO DEL MENÚ (CON CORRECCIÓN DE RUTAS E IMÁGENES)
 // ==========================================
 function renderMenu() {
     const grid = document.getElementById('menu-grid');
@@ -105,17 +105,23 @@ function renderMenu() {
 
     if (noResults) noResults.classList.add('hidden');
 
+    // Imagen de respaldo si falla alguna foto
+    const fallbackCardImg = 'https://placehold.co/600x400/a87e5a/ffffff?text=De+La+Rose';
+
     grid.innerHTML = filtered.map(item => {
         const hasVariants = item.temperatures || item.flavors || item.options || item.optionsWithPrice;
         const isRestricted = isBreakfastRestricted(item.title);
         const badgeTag = isRestricted ? 'Horario Finalizado' : (item.tag || item.category || 'Especialidad');
         const badgeBg = isRestricted ? 'bg-rose-600' : (item.badgeColor || 'bg-roseblue-400');
         
+        // Codificación segura de espacios en la ruta de la imagen
+        const imgRuta = item.image ? encodeURI(item.image) : fallbackCardImg;
+
         return `
         <div class="bg-white dark:bg-roseblue-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200/70 dark:border-roseblue-800 flex flex-col justify-between group ${isRestricted ? 'opacity-75' : ''}">
             <div>
                 <div class="relative h-32 sm:h-48 overflow-hidden bg-roseblue-100 dark:bg-roseblue-950 cursor-pointer" onclick="openProductModal(${item.id})">
-                    <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/009dff/ffffff?text=De+La+Rose'">
+                    <img src="${imgRuta}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='${fallbackCardImg}';">
                     <span class="absolute top-2 left-2 sm:top-3 sm:left-3 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] font-bold text-white uppercase tracking-wider ${badgeBg} shadow-md">
                         ${badgeTag}
                     </span>

@@ -46,7 +46,7 @@ const cartaData = {
                     img: "./Fotos DelaRose/platillos/molletes con carne.jpg"
                 },
                 { name: "Molletes Dulces", price: 40, options: ["Cajeta", "Mermelada", "Azúcar"] },
-                { name: "Hotcakes", price: 70, img: "./Fotos DelaRose/platillos/Hotcakes.jpg" },
+                { name: "Hotcakes", price: 70, img: "./Fotos DelaRose/platillos/hotcakes.jpg" },
                 { name: "Pan Francés", price: 60 , img: "./Fotos DelaRose/platillos/pan frances.jpg" }
             ],
             note: "Proteína extra $30"
@@ -156,7 +156,7 @@ const cartaData = {
                 { name: "Pizza Baguette", price: 80, desc: "Piña, jamón, salami, pepperoni, salchicha.", img: "./Fotos DelaRose/platillos/Pizza baguette.jpg" },
                 { name: "Nachos con Carne", price: 80, desc: "Arrachera o molida preparada.", img: "./Fotos DelaRose/platillos/nachos carne.jpg" },
                 { name: "Nachos Sencillos", price: 60, img: "./Fotos DelaRose/platillos/nachos sencillos.jpeg" },
-                { name: "Papas Gajo", price: 55, img: "./Fotos DelaRose/platillos/papas gajo.jpeg" },
+                { name: "Papas Gajo", price: 55, img: "./Fotos DelaRose/platillos/Papas gajo.jpeg" },
                 { name: "Papas a la Francesa", price: 45, img: "./Fotos DelaRose/platillos/papas francesas.jpeg" }
             ]
         },
@@ -176,7 +176,7 @@ const cartaData = {
                     desc: "1 refil.",
                     img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&auto=format&fit=crop&q=80"
                 },
-                { name: "Limonada Natural / Mineral", price: 35, desc: "Rosa $45 · Fresa $50.", img: "./Fotos DelaRose/bebidas/Limonadas.jpeg" },
+                { name: "Limonada Natural / Mineral", price: 35, desc: "Rosa $45 · Fresa $50.", img: "./Fotos DelaRose/bebidas/limonadas.jpeg" },
                 { name: "Naranjada Natural / Mineral", price: 45, img: "./Fotos DelaRose/bebidas/naranjada.jpeg" },
                 { name: "Chocolate De La Rose", price: 50 , img: "./Fotos DelaRose/bebidas/chocolate de la rose.jpeg"},
                 { name: "Chocomilk", price: 33 , img: "./Fotos DelaRose/bebidas/chocomilk.jpeg"},
@@ -266,8 +266,11 @@ function cartaFila(label, price, clases = '') {
 }
 
 function cartaItemHTML(item) {
-    const foto = item.img
-        ? `<img src="${item.img}" alt="${item.name}" data-foto="${item.img}" data-titulo="${item.name}" class="w-12 h-12 rounded-xl object-cover shrink-0 cursor-zoom-in shadow-sm border border-[#E8D5C4]" loading="lazy" onerror="this.remove()">`
+    const fallbackImg = 'https://placehold.co/200x200/a87e5a/ffffff?text=De+La+Rose';
+    const rutaImagen = item.img ? encodeURI(item.img) : '';
+
+const foto = item.img
+        ? `<img src="${rutaImagen}" alt="${item.name}" data-foto="${rutaImagen}" data-titulo="${item.name}" class="w-12 h-12 rounded-xl object-cover shrink-0 cursor-zoom-in shadow-sm border border-[#E8D5C4]" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">`
         : '';
 
     const cabecera = item.price != null
@@ -292,10 +295,11 @@ function cartaItemHTML(item) {
 }
 
 function cartaSeccionHTML(sec) {
-    const rutaBanner = sec.categoryImg || sec.img;
-    // Se cambia 'mb-3' por 'mt-3' para darle espacio respecto a los productos de arriba
+    const fallbackImg = 'https://placehold.co/600x300/a87e5a/ffffff?text=De+La+Rose';
+    const rutaBanner = (sec.categoryImg || sec.img) ? encodeURI(sec.categoryImg || sec.img) : '';
+
     const bannerHTML = rutaBanner
-        ? `<img src="${rutaBanner}" alt="${sec.title}" data-foto="${rutaBanner}" data-titulo="${sec.title}" class="w-1/2 mx-auto h-24 object-cover rounded-2xl mt-3 shadow-sm border border-[#E8D5C4] cursor-zoom-in block" loading="lazy" onerror="this.remove()">`
+        ? `<img src="${rutaBanner}" alt="${sec.title}" data-foto="${rutaBanner}" data-titulo="${sec.title}" class="w-1/2 mx-auto h-24 object-cover rounded-2xl mt-3 shadow-sm border border-[#E8D5C4] cursor-zoom-in block" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">`
         : '';
 
     const cuerpo = sec.layout === 'grid'
