@@ -46,7 +46,7 @@ const cartaData = {
                     img: "./Fotos DelaRose/platillos/molletes con carne.jpg"
                 },
                 { name: "Molletes Dulces", price: 40, options: ["Cajeta", "Mermelada", "Azúcar"] },
-                { name: "Hotcakes", price: 70, img: "./Fotos DelaRose/platillos/hotcakes.jpg" },
+                { name: "Hotcakes", price: 70, img: "./Fotos DelaRose/platillos/Hotcakes.jpg" },
                 { name: "Pan Francés", price: 60 , img: "./Fotos DelaRose/platillos/pan frances.jpg" }
             ],
             note: "Proteína extra $30"
@@ -110,7 +110,7 @@ const cartaData = {
                     img: "./Fotos DelaRose/platillos/crepa dulce.jpeg"
                 },
                 { name: "Suave", price: 70, desc: "Rellena de leche condensada, decorada con frutos rojos, fresa y chispas de chocolate blanco.",
-                    img: "./Fotos DelaRose/platillos/crepa suave.jpg"
+                    img: "./Fotos DelaRose/platillos/crepa suave.jpeg"
                 },
                 { 
                     name: "Chocolatosa", 
@@ -136,11 +136,11 @@ const cartaData = {
                     name: "Churro Cheesecake", 
                     price: 80, 
                     desc: "Fresa, plátano, queso crema, 1 bola de nieve de vainilla espolvoreado con azúcar y canela.",
-                    img: "./Fotos DelaRose/platillos/waffle churrocheesecake.jpeg"
+                    img: "./Fotos DelaRose/platillos/Waffle churrocheesecake.jpeg"
                 },
-                { name: "Plátano", price: 55, desc: "Plátano, cajeta y nuez.", img: "./Fotos DelaRose/platillos/waffle de plátano.jpg" },
-                { name: "Fresa", price: 60, desc: "Mermelada de fresa, fresas y chispas de chocolate blanco.", img: "./Fotos DelaRose/platillos/waffle de fresa.jpg" },
-                { name: "Chocochips", price: 65, desc: "Crema de avellanas, chispas de chocolate, plátano y fresas.", img: "./Fotos DelaRose/platillos/waffle de chocochips.jpg" },
+                { name: "Plátano", price: 55, desc: "Plátano, cajeta y nuez." },
+                { name: "Fresa", price: 60, desc: "Mermelada de fresa, fresas y chispas de chocolate blanco." },
+                { name: "Chocochips", price: 65, desc: "Crema de avellanas, chispas de chocolate, plátano y fresas." },
                 { name: "Frutos Rojos", price: 70, desc: "Frutos rojos, leche condensada y chispas de chocolate blanco.", img: "./Fotos DelaRose/platillos/waffle frutos rojos.jpeg" }
             ]
         },
@@ -156,7 +156,7 @@ const cartaData = {
                 { name: "Pizza Baguette", price: 80, desc: "Piña, jamón, salami, pepperoni, salchicha.", img: "./Fotos DelaRose/platillos/Pizza baguette.jpg" },
                 { name: "Nachos con Carne", price: 80, desc: "Arrachera o molida preparada.", img: "./Fotos DelaRose/platillos/nachos carne.jpg" },
                 { name: "Nachos Sencillos", price: 60, img: "./Fotos DelaRose/platillos/nachos sencillos.jpeg" },
-                { name: "Papas Gajo", price: 55, img: "./Fotos DelaRose/platillos/Papas gajo.jpeg" },
+                { name: "Papas Gajo", price: 55, img: "./Fotos DelaRose/platillos/papas gajo.jpeg" },
                 { name: "Papas a la Francesa", price: 45, img: "./Fotos DelaRose/platillos/papas francesas.jpeg" }
             ]
         },
@@ -173,15 +173,14 @@ const cartaData = {
                 { 
                     name: "Café de Olla", 
                     price: 40, 
-                    desc: "1 refil.",
-                    img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&auto=format&fit=crop&q=80"
+                    desc: "1 refil."
                 },
-                { name: "Limonada Natural / Mineral", price: 35, desc: "Rosa $45 · Fresa $50.", img: "./Fotos DelaRose/bebidas/limonadas.jpeg" },
+                { name: "Limonada Natural / Mineral", price: 35, desc: "Rosa $45 · Fresa $50.", img: "./Fotos DelaRose/bebidas/Limonadas.jpeg" },
                 { name: "Naranjada Natural / Mineral", price: 45, img: "./Fotos DelaRose/bebidas/naranjada.jpeg" },
                 { name: "Chocolate De La Rose", price: 50 , img: "./Fotos DelaRose/bebidas/chocolate de la rose.jpeg"},
                 { name: "Chocomilk", price: 33 , img: "./Fotos DelaRose/bebidas/chocomilk.jpeg"},
-                { name: "Jugo de Zanahoria", price: 50, img: "./Fotos DelaRose/bebidas/jugo de zanahoria.jpg" },
-                { name: "Jugo de Naranja", price: 50, img: "./Fotos DelaRose/bebidas/jugo de naranja.jpg" },
+                { name: "Jugo de Zanahoria", price: 50 },
+                { name: "Jugo de Naranja", price: 50 },
                 { name: "Jugo Verde", price: 50 },
                 { name: "Licuado de Frutas", price: 50, desc: "Avena, fresa, plátano o manzana.",img: "./Fotos DelaRose/bebidas/licuado.jpeg" },
                 { name: "Botella de Agua", price: 20 },
@@ -269,7 +268,7 @@ function cartaItemHTML(item) {
     const fallbackImg = 'https://placehold.co/200x200/a87e5a/ffffff?text=De+La+Rose';
     const rutaImagen = item.img ? encodeURI(item.img) : '';
 
-const foto = item.img
+    const foto = item.img
         ? `<img src="${rutaImagen}" alt="${item.name}" data-foto="${rutaImagen}" data-titulo="${item.name}" class="w-12 h-12 rounded-xl object-cover shrink-0 cursor-zoom-in shadow-sm border border-[#E8D5C4]" loading="lazy" onerror="this.onerror=null; this.src='${fallbackImg}';">`
         : '';
 

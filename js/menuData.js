@@ -1,3 +1,4 @@
+
 // Base de Datos Oficial Completa con Variantes, Temperaturas y Proteínas - De La Rose
 const menuItems = [
     // ================= PARA EL DÍA (DESAYUNOS Y BAGUETTES) =================
@@ -141,7 +142,7 @@ const menuItems = [
         tag: "Dulce",
         badgeColor: "bg-roseblue-400",
         description: "Esponjosos hotcakes tradicionales servidos calientitos.",
-        image: "./Fotos DelaRose/platillos/hotcakes.jpg"
+        image: "./Fotos DelaRose/platillos/Hotcakes.jpg"
     },
     {
         id: 13,
@@ -289,7 +290,7 @@ const menuItems = [
         tag: "Crepa Dulce",
         badgeColor: "bg-amber-600",
         description: "Rellena de leche condensada, decorada con frutos rojos, fresa y chispas de chocolate blanco.",
-        image: "./Fotos DelaRose/platillos/crepa suave.jpg"
+        image: "./Fotos DelaRose/platillos/crepa suave.jpeg"
     },
     {
         id: 27,
@@ -341,7 +342,7 @@ const menuItems = [
         tag: "Especial Waffle",
         badgeColor: "bg-roseblue-500",
         description: "Fresa, plátano, queso crema, 1 bola de nieve de vainilla espolvoreado con azúcar y canela.",
-        image: "./Fotos DelaRose/platillos/waffle churrocheesecake.jpeg"
+        image: "./Fotos DelaRose/platillos/Waffle churrocheesecake.jpeg"
     },
     {
         id: 32,
@@ -351,7 +352,7 @@ const menuItems = [
         tag: "Waffle",
         badgeColor: "bg-amber-600",
         description: "Acompañado con plátano, cajeta y nuez.",
-        image: "./Fotos DelaRose/platillos/waffle de plátano.jpg"
+        image: ""
     },
     {
         id: 33,
@@ -361,7 +362,7 @@ const menuItems = [
         tag: "Waffle",
         badgeColor: "bg-amber-600",
         description: "Mermelada de fresa, fresas frescas y chispas de chocolate blanco.",
-        image: "./Fotos DelaRose/platillos/waffle de fresa.jpg"
+        image: ""
     },
     {
         id: 34,
@@ -371,7 +372,7 @@ const menuItems = [
         tag: "Waffle",
         badgeColor: "bg-amber-600",
         description: "Crema de avellanas, chispas de chocolate, plátano y fresas.",
-        image: "./Fotos DelaRose/platillos/waffle de chocochips.jpg"
+        image: ""
     },
     {
         id: 35,
@@ -435,7 +436,7 @@ const menuItems = [
         tag: "Snack",
         badgeColor: "bg-slate-600",
         description: "Sazonadas al estilo de la casa, doraditas y crujientes.",
-        image: "./Fotos DelaRose/platillos/Papas gajo.jpeg"
+        image: "./Fotos DelaRose/platillos/papas gajo.jpeg"
     },
     {
         id: 41,
@@ -724,7 +725,7 @@ const menuItems = [
             { name: "Rosa", price: 45 },
             { name: "Fresa", price: 50 }
         ],
-        image: "./Fotos DelaRose/bebidas/limonadas.jpeg"
+        image: "./Fotos DelaRose/bebidas/Limonadas.jpeg"
     },
     {
         id: 59,
@@ -748,7 +749,7 @@ const menuItems = [
         description: "Jugo fresco preparado al momento.",
         optionsLabel: "Elige la Receta",
         options: ["Zanahoria", "Naranja", "Jugo Verde"],
-        image: "./Fotos DelaRose/bebidas/jugo de naranja.jpg"
+        image: ""
     },
     {
         id: 61,
@@ -805,4 +806,3 @@ const menuItems = [
         image: ""
     }
 ];
-
